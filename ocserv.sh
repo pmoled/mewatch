@@ -15,7 +15,7 @@ conf_file="/etc/ocserv"
 conf="/etc/ocserv/ocserv.conf"
 passwd_file="/etc/ocserv/ocpasswd"
 log_file="/tmp/ocserv.log"
-ocserv_ver="0.11.8"
+ocserv_ver="1.1.3"
 PID_FILE="/var/run/ocserv.pid"
 
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
@@ -72,7 +72,7 @@ Download_ocserv(){
 	mkdir "ocserv" && cd "ocserv"
 	wget "ftp://ftp.infradead.org/pub/ocserv/ocserv-${ocserv_ver}.tar.xz"
 	[[ ! -s "ocserv-${ocserv_ver}.tar.xz" ]] && echo -e "${Error} ocserv 源码文件下载失败 !" && rm -rf "ocserv/" && rm -rf "ocserv-${ocserv_ver}.tar.xz" && exit 1
-	tar -xJf ocserv-0.11.8.tar.xz && cd ocserv-0.11.8
+	tar -xJf ocserv-1.1.3.tar.xz && cd ocserv-1.1.3
 	./configure
 	make
 	make install
@@ -246,8 +246,8 @@ Set_tcp_port(){
 	while true
 	do
 	echo -e "请输入VPN服务端的TCP端口"
-	read -e -p "(默认: 3389):" set_tcp_port
-	[[ -z "$set_tcp_port" ]] && set_tcp_port="3389"
+	read -e -p "(默认: 443):" set_tcp_port
+	[[ -z "$set_tcp_port" ]] && set_tcp_port="443"
 	echo $((${set_tcp_port}+0)) &>/dev/null
 	if [[ $? -eq 0 ]]; then
 		if [[ ${set_tcp_port} -ge 1 ]] && [[ ${set_tcp_port} -le 65535 ]]; then
