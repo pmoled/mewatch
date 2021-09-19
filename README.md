@@ -42,6 +42,7 @@ anyconnect一键安装脚本
 
 curl -O https://raw.githubusercontent.com/iw4p/OpenConnect-VPN-Server/master/ocserv-install.sh
 chmod +x ocserv-install.sh
+
 ./ocserv-install.sh
 
 ◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
