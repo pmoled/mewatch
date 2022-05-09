@@ -109,7 +109,7 @@ archAffix(){
             echo 'arm'
         ;;
         *armv8*|aarch64)
-            echo 'arm64'
+            echo 'arm64-v8a'
         ;;
         *mips64le*)
             echo 'mips64le'
