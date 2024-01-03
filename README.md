@@ -40,10 +40,12 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/pmoled/mewatch/
 
 anyconnect一键安装脚本
 
-curl -O https://raw.githubusercontent.com/iw4p/OpenConnect-VPN-Server/master/ocserv-install.sh
 
+sudo apt-get update -y
+sudo apt-get install -y gnutls-bin
+
+curl -O https://raw.githubusercontent.com/iw4p/OpenConnect-Cisco-AnyConnect-VPN-Server-OneKey-ocserv/master/ocserv-install.sh
 chmod +x ocserv-install.sh
-
 ./ocserv-install.sh
 
 ◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
